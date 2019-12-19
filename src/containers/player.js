@@ -3,20 +3,21 @@ import React, { Component } from 'react';
 import Stat from '../components/stat'
 
 class Player extends Component {
-  playerPos(ps) {
-    let pos = ps.shift();
-    for (let p in ps) {
-      pos = pos + ', ' + ps[p];
-    }
-    return pos;
-  }
+  // playerPos(ps) {
+  //   let pos = ps.shift();
+  //   for (let p in ps) {
+  //     pos = pos + ', ' + ps[p];
+  //   }
+  //   return pos;
+  // }
 
   render() {
     return (
       <div className='d-flex align-items-center card'>
         <div id='player-info'>
           <h2>{this.props.name}</h2>
-          <h3>{this.props.team} {this.playerPos(this.props.pos)}</h3>
+          <h3>{this.props.team} {this.props.id}</h3>
+          {/* <h3>{this.props.team} {this.playerPos(this.props.pos)}</h3> */}
         </div>
         <div className='d-flex stats justify-content-end'>
           <Stat type='MIN' />
