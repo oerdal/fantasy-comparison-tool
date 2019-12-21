@@ -11,8 +11,8 @@ class Stat extends Component {
 
   render() {
     return (
-      <div className='d-flex flex-column'>
-        <span className='Stat-Type'>{this.props.type}</span>
+      <div className='d-flex flex-column mx-4'>
+        <span className='stat-type py-0'>{this.props.type}</span>
         <span>{this.state.value}</span>
       </div>
     )

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Player from './player';
 
 class PlayerList extends Component {
-
+  
   state = {
     loaded: false,
     roster: []
@@ -24,8 +24,6 @@ class PlayerList extends Component {
   }
 
   getPlayerIDs = _ => {
-    const teamid = '1610612745';
-    const leagueid = '00';
     const season = '2019-20';
     const url = 'https://stats.nba.com/stats/commonallplayers/?leagueId=00&season=' + season + '&isOnlyCurrentSeason=1';
     fetch(url)
@@ -36,7 +34,7 @@ class PlayerList extends Component {
 
   renderRoster() {
     alert('beep');
-    return this.state.roster.map(player => {
+    return this.state.roster.slice(0,10).map(player => {
       console.log(player)
       return <Player key={player.pid} name={player.pname} team={player.tname} id={player.pid} />
     });
@@ -45,7 +43,7 @@ class PlayerList extends Component {
   render() {
     if (!this.state.loaded) {
       return <div />
-  }
+    }
 
     return (
       <div className='container'>

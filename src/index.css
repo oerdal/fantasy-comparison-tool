@@ -12,14 +12,18 @@ code {
     monospace;
 }
 
-#player-info {
-  width: 200px;
+.player-card, .stats {
+  height: 50px;
 }
 
-#player-info > h2 {
+.player-info {
+  width: 300px;
+}
+
+.player-info > h2 {
   font-size: 18px;
 }
 
-#player-info > h3 {
+.player-info > h3 {
   font-size: 12px;
 }
